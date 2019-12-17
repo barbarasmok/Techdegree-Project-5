@@ -1,20 +1,68 @@
 //FLEX
 
-@mixin flex($dir: flex, $dir: null, $wrap: null, $just: null, $ali: null) {
-    display: $disp;
-    flex-wrap: $wrap;
-    flex-direction: $dir;
-    justify-content: $just;
-    align-content: $ali;
-    @content;
+@mixin flex(
+    $dir: flex, 
+    $dir: null, 
+    $wrap: null, 
+    $just: null, 
+    $ali: null) {
+        display: $disp;
+        flex-wrap: $wrap;
+        flex-direction: $dir;
+        justify-content: $just;
+        align-content: $ali;
+        @content;
 }
 
-@mixin flex-item() {
-
-    
+@mixin flex-item(
+    $row: null, 
+    $basis: null, 
+    $shrink: null, 
+    $justify-self: null, 
+    $align-self: null) {
+        flex-grow: $grow;
+        flex-basis: $basis;
+        flex-shrink: $shrink;
+        justify-self: $justify-self;
+        align-self: $align-self;
+        @content;
 }
 
-@mixin flex-width() {
+@mixin flex-width($width: null, $margin-auto: null) {
+    width: $width;
+    @if $margin-auto  != null {
+        margin: 0 auto;
+    }
+}
 
-    
+
+//MARGINS & PADDINGS
+
+@mixin margin(
+    $top: null, 
+    $top-amount: null, 
+    $bottom-amount: null, 
+    $left: null, 
+    $left-amount: null, 
+    $right: null, 
+    $right-amount: null,
+    $all: null,
+    $all-amount: null) {
+
+    @if stop != null or $top == 'true' {
+        margin-top: $top-amount
+    }
+    @if stop != null or $bottom == 'true' {
+        margin-bottom: $bottom-amount
+    }
+    @if stop != null or $left == 'true' {
+        margin-left: $left-amount
+    }
+    @if stop != null or $right == 'true' {
+        margin-right: $right-amount
+    }
+    @if stop != null or $all == 'true' {
+        margin: $all-amount
+    }
+
 }
