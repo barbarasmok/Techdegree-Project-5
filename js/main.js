@@ -66,6 +66,8 @@ let gallery = {
     "A field of bluebells with mountains in the distance"],
 };
 
+
+// FUNCTION TO SET UP THE CAPTION
 function drawImages() {
     for (let i = 0; i < gallery.id.length; i++) {
         if ($("#search").val().toLowerCase() == "") {
@@ -76,7 +78,7 @@ function drawImages() {
     }
 }
 
-// Calling the function
+// CALLING OUT THE FUNCTION
 drawImages();
 $("#search").keyup(function() {
     $("#modal-box").empty();
