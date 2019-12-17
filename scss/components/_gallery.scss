@@ -1,0 +1,28 @@
+#gallery {
+    &-container {
+        @include flex($dir: column, $just: center, $ali: center);
+        @include flex-width($left: 'true', $left-amount: 0);
+        @include padding(100%);
+        @include mq('sm') {
+            @include flex($dir: column, $just: center, $ali: center, $wrap: wrap);
+            @include flex-width(90% auto);
+            &::after {
+                content: "";
+                flex: auto;
+            }
+        }
+
+        @include mq('med') {
+            @include flex-width(80% auto);
+        }
+
+        @include mq('large') {
+            @include flex-width(70% auto);
+        }
+
+        @include mq('xl') {
+            @include flex-width(60% auto);
+        }
+
+    }
+}
