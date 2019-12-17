@@ -66,3 +66,80 @@
     }
 
 }
+
+@mixin padding(
+    $top: null, 
+    $top-amount: null, 
+    $bottom-amount: null, 
+    $left: null, 
+    $left-amount: null, 
+    $right: null, 
+    $right-amount: null,
+    $all: null,
+    $all-amount: null) {
+
+    @if stop != null or $top == 'true' {
+        padding-top: $top-amount
+    }
+    @if stop != null or $bottom == 'true' {
+        padding-bottom: $bottom-amount
+    }
+    @if stop != null or $left == 'true' {
+        padding-left: $left-amount
+    }
+    @if stop != null or $right == 'true' {
+        padding-right: $right-amount
+    }
+    @if stop != null or $all == 'true' {
+        padding: $all-amount
+    }
+
+}
+
+//BORDERS
+
+@mixin border(
+    $width: null, 
+    $color-rgba: null, 
+    $color-hex: null, 
+    $style: null, 
+    $radius: null, 
+    $side: null) {
+
+        @if $side == 'all' or $side == null {
+            border-style: $style;
+            border-width: $width;
+            border-color: $color-rgb $color-rgba $color-hex;
+        } @else {
+            border#{'_' + $side + '_style'}: $style;
+            border#{'_' + $side + '_width'}: $width;
+            border#{'_' + $side + '_color'}: $color-rgb $color-rgba $color-hex;
+        }
+        border-radius: $radius;
+        @content;
+}
+
+@mixin outline(
+    $color-rgb: null, 
+    $color-rgba: null, 
+    $color-hex: null, 
+    $offset: null, 
+    $width: null, 
+    $style: null) {
+      outline: ($color-rgb $color-rgba $color-hex $width $style);
+      @content;
+}
+
+@mixin shadow(
+    $offsetX: null, 
+    $offsetY: null, 
+    $blur-radius: null, 
+    $spread-radius: null, 
+    $color: null, 
+    $inset: null) {
+      box-shadow: ($offsetX $offsetY $blur-radius $spread-radius $color $inset);
+      @content;
+}
+
+
+// POSITIONS
