@@ -1,13 +1,22 @@
 #gallery {
     &-container {
-        @include flex($dir: column, $just: center, $ali: center);
-        @include flex-width($left: 'true', $left-amount: 0);
+        @include flex(
+            $dir: column, 
+            $just: center, 
+            $ali: center);
+        @include flex-width(
+            $left: 'true', 
+            $left-amount: 0);
         @include padding(100%);
         @include mq('sm') {
-            @include flex($dir: column, $just: center, $ali: center, $wrap: wrap);
+            @include flex(
+                $dir: column, 
+                $just: center, 
+                $ali: center, 
+                $wrap: wrap);
             @include flex-width(90% auto);
             &::after {
-                content: "";
+                content: " ";
                 flex: auto;
             }
         }

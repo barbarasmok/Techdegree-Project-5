@@ -1,12 +1,13 @@
 // SET UP THE PHOTO GALLERY INFO
 let gallery = {
-    id: ["haybales", 
+    id: [
+    "haybales", 
     "lake", 
     "canyon", 
     "iceberg", 
-    "desert", 
-    "fall", 
-    "plantation", 
+    "desert",
+    "fall",
+    "plantation",
     "dunes", 
     "countrysidelane", 
     "sunset", 
@@ -31,9 +32,9 @@ let gallery = {
 function drawImages() {
     for (let i = 0; i < gallery.id.length; i++) {
         if ($("#search").val().toLowerCase() == "") {
-            document.getElementById("gallery-container").innerHTML += ('<a class="gallery-container-item" href="' + gallery.modalImgSrc[i] + '" data-lightbox="nature" data-title="' + gallery.caption[i] + '" data-alt="' + gallery.modalImgSrc[i] + '"><img src="' + gallery.thumbnailsImgSrc[i] + '" alt="' + gallery.imgAlt[i] + '"></a>');
+            document.getElementById("#gallery-container").innerHTML += ('<a class="gallery-container-item" href="' + gallery.modalImgSrc[i] + '" data-lightbox="nature" data-title="' + gallery.caption[i] + '" data-alt="' + gallery.modalImgSrc[i] + '"><img src="' + gallery.thumbnailsImgSrc[i] + '" alt="' + gallery.imgAlt[i] + '"></a>');
         } else if (gallery.caption [i].includes($("#search").val().toLowerCase())){
-            document.getElementById("gallery-container").innerHTML += ('<a class="gallery-container-item" href="' + gallery.modalImgSrc[i] + '" data-lightbox="nature" data-title="' + gallery.caption[i] + '" data-alt="' + gallery.modalImgSrc[i] + '"><img src="' + gallery.thumbnailsImgSrc[i] + '" alt="' + gallery.imgAlt[i] + '"></a>');
+            document.getElementById("#gallery-container").innerHTML += ('<a class="gallery-container-item" href="' + gallery.modalImgSrc[i] + '" data-lightbox="nature" data-title="' + gallery.caption[i] + '" data-alt="' + gallery.modalImgSrc[i] + '"><img src="' + gallery.thumbnailsImgSrc[i] + '" alt="' + gallery.imgAlt[i] + '"></a>');
         }
     }
 }
