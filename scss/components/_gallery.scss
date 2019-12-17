@@ -26,3 +26,24 @@
 
     }
 }
+
+
+.gallery-container-item {
+    @extend %mar-0-auto;
+    @include flex($just:center);
+
+    @include mq('sm') {
+        @include flex-width($basis: 50%);
+    }
+
+    @include mq('med') {
+        @include flex-width($basis: 33%);
+    }
+
+    @include mq('large') {
+        @include flex-width($basis: 25%);
+    }
+
+    list-style: none;
+
+}
