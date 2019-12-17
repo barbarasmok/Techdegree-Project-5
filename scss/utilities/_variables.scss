@@ -1,3 +1,5 @@
+// BREAKPOINTS
+
 $breakpoints: (
     'xs': 480px,
     'sm': 600px,
@@ -6,3 +8,7 @@ $breakpoints: (
     'xl': 2000px
 );
 
+
+// MODAL BOX
+$modal-color: rgba(19, 19, 19, .95);
+$modal-max-width: 800px;
