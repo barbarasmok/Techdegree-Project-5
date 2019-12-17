@@ -12,7 +12,7 @@ let gallery = {
     "countrysidelane", 
     "sunset", 
     "cave", 
-    "bluebells"];
+    "bluebells",];
 
     captions: [
     "I love hay bales. Took this snap on a drive through the countryside past some straw fields.", 
@@ -26,7 +26,7 @@ let gallery = {
     "We enjoyed a quiet stroll down this countryside lane.", 
     "Sunset at the coast! The sky turned a lovely shade of orange.", 
     "I did a tour of a cave today and the view of the landscape below was breathtaking.", 
-    "I walked through this meadow of bluebells and got a good view of the snow on the mountain before the fog came in."];
+    "I walked through this meadow of bluebells and got a good view of the snow on the mountain before the fog came in.",];
 };
 
 function drawImages() {
