@@ -14,8 +14,7 @@ let gallery = {
     "cave", 
     "bluebells"]
 
-    captions: [
-    "I love hay bales. Took this snap on a drive through the countryside past some straw fields.", 
+    caption: ["I love hay bales. Took this snap on a drive through the countryside past some straw fields.", 
     "The lake was so calm today. We had a great view of the snow on the mountains from here.", 
     "I hiked to the top of the mountain and got this picture of the canyon and trees below.", 
     "It was amazing to see an iceberg up close, it was so cold but didn’t snow today.", 
