@@ -1,0 +1,20 @@
+//FLEX
+
+@mixin flex($dir: flex, $dir: null, $wrap: null, $just: null, $ali: null) {
+    display: $disp;
+    flex-wrap: $wrap;
+    flex-direction: $dir;
+    justify-content: $just;
+    align-content: $ali;
+    @content;
+}
+
+@mixin flex-item() {
+
+    
+}
+
+@mixin flex-width() {
+
+    
+}
